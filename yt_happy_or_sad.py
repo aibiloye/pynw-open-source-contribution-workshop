@@ -42,7 +42,7 @@ def happy_or_sad(video_url):
           .format(no_comments=len(comments), verdict=verdict, happy_count=happy_count, sad_count=sad_count))
 
 def UrlValueCheck(UrlAddress):
-    if UrlAddress.startswith(("https://", "http://"))
+    if UrlAddress.startswith(("https://", "http://")):
         pass
     else:
         raise ValueError ("Please enter a valid URL")
