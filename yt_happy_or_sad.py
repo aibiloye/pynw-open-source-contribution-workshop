@@ -41,9 +41,18 @@ def happy_or_sad(video_url):
           'It contained {happy_count} happy keywords and {sad_count} sad keywords'
           .format(no_comments=len(comments), verdict=verdict, happy_count=happy_count, sad_count=sad_count))
 
+def UrlValueCheck(UrlAddress):
+    if UrlAddress.startswith(("https://", "http://"))
+        pass
+    else:
+        raise ValueError ("Please enter a valid URL")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Youtube video happy or sad')
-    parser.add_argument('url', metavar='URL', help='URL of Youtube video')
+    parser.add_argument('url', metavar='URL', help='URL of Youtube video', type = UrlValueCheck) 
     args = parser.parse_args()
     happy_or_sad(args.url)
+
+
+
+
